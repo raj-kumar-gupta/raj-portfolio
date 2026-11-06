@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Raj Kumar - MCA student and aspiring software developer portfolio">
+<title>Raj Kumar | Developer Portfolio</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2e;--text:#eef2ff;--muted:#a7b1c8;--accent:#69e0c1;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#1a3150 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1080px,90%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--accent)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.94rem}.navlinks a:hover{color:var(--accent)}
+.hero{min-height:78vh;display:grid;align-content:center;padding:70px 0}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}.hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.05;margin:18px 0}.hero h1 span{color:var(--accent)}.hero p{max-width:650px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}.btn{padding:12px 20px;border-radius:10px;background:var(--accent);color:#07151a;font-weight:800}.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+section{padding:58px 0}.section-title{font-size:2rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 28px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:rgba(18,26,46,.88);border:1px solid var(--line);border-radius:18px;padding:24px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0 0 15px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:.8rem;color:var(--accent);border:1px solid rgba(105,224,193,.25);padding:5px 10px;border-radius:30px}.skills{display:flex;flex-wrap:wrap;gap:12px}.skill{background:var(--panel);border:1px solid var(--line);padding:12px 16px;border-radius:12px}.about{max-width:780px;color:var(--muted)}.contact{display:flex;gap:12px;flex-wrap:wrap}.contact a{border:1px solid var(--line);padding:12px 16px;border-radius:10px}.contact a:hover{border-color:var(--accent)}footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.9rem}
+@media(max-width:650px){.navlinks{gap:12px;font-size:.8rem}.grid{grid-template-columns:1fr}.hero{min-height:70vh}.nav{align-items:flex-start;gap:12px;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="logo" href="#">RAJ<span>.</span></a>
+  <nav class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="wrap hero">
+  <div class="eyebrow">MCA Student · Aspiring Software Developer</div>
+  <h1>Hi, I'm <span>Raj Kumar.</span><br>I build useful things with code.</h1>
+  <p>I’m an MCA student interested in software development, databases, and building practical applications. I enjoy learning by creating projects and solving real-world problems.</p>
+  <div class="actions"><a class="btn" href="#projects">View my projects</a><a class="btn secondary" href="#contact">Get in touch</a></div>
+</section>
+<section class="wrap" id="about">
+  <h2 class="section-title">About me</h2><p class="about">I’m developing my skills in programming and full-stack application development. My project work includes database design, authentication, web application development, and experimenting with machine learning. I’m currently looking for opportunities to learn, contribute, and grow as a developer.</p>
+</section>
+<section class="wrap" id="skills">
+  <h2 class="section-title">Skills</h2><p class="sub">Technologies I have worked with or explored.</p>
+  <div class="skills"><span class="skill">Java</span><span class="skill">Spring Boot</span><span class="skill">MySQL</span><span class="skill">Python</span><span class="skill">TensorFlow</span><span class="skill">Streamlit</span><span class="skill">JavaScript</span><span class="skill">Node.js</span><span class="skill">MongoDB</span><span class="skill">HTML & CSS</span><span class="skill">Git & GitHub</span></div>
+</section>
+<section class="wrap" id="projects">
+  <h2 class="section-title">Featured projects</h2><p class="sub">A selection of projects I have worked on.</p>
+  <div class="grid">
+    <article class="card"><h3>RaktaSetu</h3><p>A blood donation and emergency donor-finder web application. Worked on MySQL database setup, authentication flow, and donor/request data handling.</p><div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span></div></article>
+    <article class="card"><h3>AI-Powered Medical Diagnosis</h3><p>A machine-learning project that classifies blood-cell images. Worked with dataset preparation, model training, and a Streamlit interface. Model output is experimental, not a clinical diagnosis.</p><div class="tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Streamlit</span></div></article>
+    <article class="card"><h3>Study Planner</h3><p>A web application for organizing study routines and tasks, with user signup and OTP-based email verification.</p><div class="tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">JavaScript</span></div></article>
+  </div>
+</section>
+<section class="wrap" id="contact">
+  <h2 class="section-title">Let’s connect</h2><p class="sub">Have an opportunity, project idea, or feedback? Feel free to reach out.</p>
+  <div class="contact">
+    <a href="mailto:YOUR_EMAIL@example.com">Email me</a>
+    <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" target="_blank" rel="noreferrer">LinkedIn</a>
+  </div>
+  <p class="sub" style="margin-top:18px">Replace the sample email and profile links with your real details before publishing.</p>
+</section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Raj Kumar. Built with HTML & CSS.</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
