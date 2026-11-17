@@ -131,9 +131,9 @@ a:focus-visible {
 .hero {
   display: grid;
   min-height: min(740px, calc(100svh - 76px));
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.75fr);
   align-items: center;
-  gap: clamp(3rem, 8vw, 7rem);
+  gap: clamp(2.5rem, 6vw, 5rem);
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -202,14 +202,14 @@ a:focus-visible {
   position: relative;
   width: min(100%, 410px);
   justify-self: center;
-  padding: 0 1.4rem 1.4rem 0;
 }
 
 .portrait-frame {
   position: relative;
   overflow: hidden;
-  min-height: 480px;
-  border-radius: 48% 48% 24px 24px;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(29, 107, 81, 0.12);
+  border-radius: 24px;
   background: var(--mint);
   box-shadow: var(--shadow);
 }
@@ -219,7 +219,7 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 28%;
 }
 
 .portrait-frame::after {
@@ -267,31 +267,6 @@ a:focus-visible {
 .portrait-caption span:not(.caption-mark) {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.82rem;
-}
-
-.floating-note {
-  position: absolute;
-  right: -0.6rem;
-  bottom: 4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--surface);
-  padding: 0.9rem 1rem;
-  box-shadow: var(--shadow);
-  font-size: 0.79rem;
-  line-height: 1.5;
-}
-
-.note-icon {
-  color: var(--green);
-  font-size: 1.35rem;
-}
-
-.floating-note strong {
-  color: var(--green-dark);
 }
 
 section:not(.hero) {
@@ -555,13 +530,9 @@ section:not(.hero) {
 
   .hero {
     min-height: auto;
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
     gap: 2rem;
     padding-top: 4rem;
-  }
-
-  .portrait-frame {
-    min-height: 390px;
   }
 
   .about-grid {
@@ -594,19 +565,21 @@ section:not(.hero) {
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 3.5rem;
-  }
-
-  .hero-copy h1 {
-    font-size: clamp(3rem, 14vw, 4.5rem);
+    gap: 1.6rem;
+    padding-top: 2.5rem;
   }
 
   .hero-visual {
-    width: min(100%, 380px);
+    order: -1;
+    width: min(100%, 270px);
   }
 
   .portrait-frame {
-    min-height: 440px;
+    border-radius: 20px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.6rem, 11vw, 3.6rem);
   }
 
   section:not(.hero) {
